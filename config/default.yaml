@@ -1,0 +1,57 @@
+# Default configuration for Drift Phonk Autopilot Playbook
+# Copy this file to local.yaml and customize for your setup
+
+# Autopilot system configuration
+autopilot:
+  provider: "simulation"  # Options: tesla, comma, custom, simulation
+  safety_mode: true
+  max_speed: 25  # Maximum speed in mph for drift mode
+  min_speed: 5   # Minimum speed to maintain
+  steering_sensitivity: 0.8
+  brake_threshold: 0.3
+  
+# Audio system configuration  
+audio:
+  output_device: "default"
+  sample_rate: 44100
+  buffer_size: 1024
+  volume: 0.7
+  bass_boost: true
+  bass_frequency: 80  # Hz
+  bass_gain: 6        # dB
+  
+# Music synchronization settings
+sync:
+  beat_detection: true
+  bpm_range: [120, 180]  # Typical phonk BPM range
+  pattern_timing: "auto"  # auto, manual, beat
+  visual_feedback: true
+  haptic_feedback: false
+  
+# Pattern configuration
+patterns:
+  default_set: "basic_drift"
+  transition_smoothness: 0.5
+  loop_patterns: true
+  randomize_order: false
+  
+# Safety systems
+safety:
+  emergency_brake: true
+  speed_limiter: true
+  collision_detection: true
+  human_override: true
+  safe_zone_only: true
+  
+# Logging and monitoring
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "logs/drift_phonk.log"
+  max_file_size: "10MB"
+  backup_count: 5
+  
+# Development settings
+development:
+  debug_mode: false
+  simulation_only: true
+  test_patterns: false

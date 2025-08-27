@@ -1,0 +1,88 @@
+# Drift Phonk Autopilot Playbook - Ignore List
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/*.log*
+
+# Music files (keep structure but ignore actual music)
+music/*.mp3
+music/*.wav
+music/*.flac
+music/*.ogg
+
+# Configuration overrides
+config/local.yaml
+config/production.yaml
+config/*.local.yaml
+
+# Testing
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+.cache
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+/tmp/
+*.tmp
+*.temp
+
+# Audio processing cache
+.audio_cache/
+*.pkl
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Documentation build
+docs/_build/
+
+# Package files
+*.tar.gz
+*.zip

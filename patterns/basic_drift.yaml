@@ -1,0 +1,92 @@
+# Basic Drift Pattern
+# Synchronized drift sequence for phonk music integration
+
+name: "Basic Drift"
+description: "Simple drift pattern perfect for beginners and testing"
+version: "1.0"
+
+# Music configuration
+music_file: "music/basic_phonk.mp3"
+expected_bpm: 150
+sync_mode: "beat"  # Options: beat, auto, manual
+
+# Pattern metadata
+difficulty: "beginner"
+duration: 60  # seconds
+loop: true
+
+# Safety parameters
+max_speed: 25  # mph
+min_speed: 10  # mph
+safety_margin: 5  # meters
+
+# Drift sequence steps
+steps:
+  - name: "Entry Straight"
+    speed: 20.0
+    steering: 0.0
+    duration: 3.0
+    description: "Build speed for entry"
+    
+  - name: "Initiate Left"
+    speed: 15.0
+    steering: -0.8
+    duration: 1.5
+    description: "Initiate left drift"
+    
+  - name: "Hold Left Drift"
+    speed: 16.0
+    steering: -0.6
+    duration: 2.0
+    description: "Maintain left drift angle"
+    
+  - name: "Transition"
+    speed: 18.0
+    steering: 0.2
+    duration: 1.0
+    description: "Transition to recovery"
+    
+  - name: "Initiate Right"
+    speed: 15.0
+    steering: 0.8
+    duration: 1.5
+    description: "Initiate right drift"
+    
+  - name: "Hold Right Drift"
+    speed: 16.0
+    steering: 0.6
+    duration: 2.0
+    description: "Maintain right drift angle"
+    
+  - name: "Recovery"
+    speed: 18.0
+    steering: -0.2
+    duration: 1.5
+    description: "Recover to straight line"
+    
+  - name: "Exit Straight"
+    speed: 22.0
+    steering: 0.0
+    duration: 2.0
+    description: "Accelerate out of pattern"
+
+# Beat synchronization points
+beat_triggers:
+  - step: 1
+    beat_offset: 0.0
+    description: "Start on strong beat"
+    
+  - step: 3
+    beat_offset: 0.5
+    description: "Drift hold on off-beat"
+    
+  - step: 5
+    beat_offset: 0.0
+    description: "Direction change on beat"
+
+# Visual feedback configuration
+feedback:
+  show_step_progress: true
+  show_beat_sync: true
+  show_steering_angle: true
+  show_speed: true
